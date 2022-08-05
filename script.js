@@ -24,12 +24,8 @@ const stepInput = document.createElement('input');
 stepInput.classList.add('w-25', 'm-auto');
 stepInput.type = 'number';
 
-const resultLabel = document.createElement('label');
-resultLabel.innerHTML = 'Result';
-
-const resultInput = document.createElement('input');
-resultInput.type = 'text';
-resultInput.classList.add('no-outline', 'text-center', 'fs-4');
+const resultH2 = document.createElement('h2');
+resultH2.innerHTML = 'Result';
 
 const button = document.createElement('button');
 button.classList.add('btn', 'btn-primary', 'mt-4', 'w-25', 'm-auto');
@@ -43,8 +39,7 @@ div.append(
     secondNumInput,
     stepLabel,
     stepInput,
-    resultLabel,
-    resultInput,
+    resultH2,
     button,
   ]
 );
@@ -58,5 +53,5 @@ function showNums() {
   for (let i = firstIndex; i <= lastIndex; i += jump) {
     numbers.push(i);
   }
-  resultInput.placeholder = numbers;
+  resultH2.innerHTML = numbers;
 }
