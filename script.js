@@ -4,30 +4,35 @@
 // [11:43 AM]
 // ==============
 const div = document.createElement('div');
-div.classList.add('row', 'w-50', 'm-auto');
+div.classList.add('row', 'm-auto', 'text-center');
 document.body.appendChild(div);
 const firstNumLabel = document.createElement('label');
 firstNumLabel.innerHTML = 'First number';
 const firstNumInput = document.createElement('input');
+firstNumInput.classList.add('w-25', 'm-auto');
 firstNumInput.type = 'number';
 
 const secondNumLabel = document.createElement('label');
 secondNumLabel.innerHTML = 'Second number';
 const secondNumInput = document.createElement('input');
+secondNumInput.classList.add('w-25', 'm-auto');
 secondNumInput.type = 'number';
 
 const stepLabel = document.createElement('label');
 stepLabel.innerHTML = 'Step';
 const stepInput = document.createElement('input');
+stepInput.classList.add('w-25', 'm-auto');
 stepInput.type = 'number';
 
 const resultLabel = document.createElement('label');
 resultLabel.innerHTML = 'Result';
+
 const resultInput = document.createElement('input');
 resultInput.type = 'text';
+resultInput.classList.add('no-outline', 'text-center', 'fs-4');
 
 const button = document.createElement('button');
-button.classList.add('btn', 'btn-primary', 'mt-4');
+button.classList.add('btn', 'btn-primary', 'mt-4', 'w-25', 'm-auto');
 button.innerHTML = 'Show numbers in steps';
 button.setAttribute('onclick', 'showNums()');
 div.append(
